@@ -1,11 +1,10 @@
 public class Euler1
 {
-
-
   public static void main(String[] args)
   {
     int total = 0;
-    for(int i = 0; i < 1000; i++)
+    int endRange = 1000;
+    for(int i = 0; i < endRange; i++)
     {
       if(i % 3 == 0 || i % 5 == 0)
       {
