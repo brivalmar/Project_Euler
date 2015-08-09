@@ -6,7 +6,6 @@ public class FiboEuler2
   {
     int startingValue = 1;
     int secondValue = 2;
-    int nextValue = 0;
     int lastValue = 4000000;
     int total = 0;
     ArrayList<Integer> fiboNumb = new ArrayList<Integer>();
