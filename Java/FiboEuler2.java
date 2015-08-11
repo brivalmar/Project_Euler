@@ -1,27 +1,21 @@
-import java.util.ArrayList;
-
 public class FiboEuler2
 {
   public static void main(String[] args)
   {
-    int startingValue = 1;
-    int secondValue = 2;
-    int lastValue = 4000000;
+    int value1 = 1;
+    int value2 = 1;
+    final int LASTVALUE = 4000000;
     int total = 0;
-    ArrayList<Integer> fiboNumb = new ArrayList<Integer>();
-    fiboNumb.add(startingValue);
-    fiboNumb.add(startingValue);
-    fiboNumb.add(secondValue);
-    for(int i = 2; fiboNumb.get(i) < lastValue; i++)
+
+    while(value2 < LASTVALUE)
     {
-      if(fiboNumb.get(i) < lastValue)
+      int nextValue = value1 + value2;
+      if(nextValue % 2 ==0)
       {
-        fiboNumb.add(fiboNumb.get(i)+fiboNumb.get(i-1));
+        total = total + nextValue;
       }
-      if(fiboNumb.get(i) % 2 == 0)
-      {
-        total = total + fiboNumb.get(i);
-      }
+      value1= value2;
+      value2 = nextValue;
     }
     System.out.println("The sum of Fibonacci numbers that are less than 4,000,000 is: " + total);
   }
